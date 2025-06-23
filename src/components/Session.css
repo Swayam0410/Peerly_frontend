@@ -1,0 +1,15 @@
+.whole{
+    height: 90%;
+    width: 90vw;
+    padding: 20px;
+    margin-left: 3%;
+}
+.disp{
+    padding: 20px;
+      display: grid;
+    grid-template-columns: repeat(3,500px);
+    gap: 20px;
+}
+.filter{
+  text-align: center;
+}

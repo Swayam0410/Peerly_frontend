@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+#root {
+  width: 120%;
+  margin:auto;
+  text-align: center;
+}
+
+/* Optional: center user content vertically */
+html, body, #root {
+  min-height: 100%;
+  background-color: #101828; /* Tailwind’s gray-50 */
+}
+
+/* Optional: Spinner animation if needed */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

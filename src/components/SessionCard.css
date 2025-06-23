@@ -1,0 +1,38 @@
+.outer{
+    border: 3px solid black;
+    height: 200px;
+    width: 400px;
+    padding: 5px;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 20px;
+    background-color: darkcyan;
+    
+}
+.topic{
+font-weight: 900;
+font-size: 20px;
+}
+.del{
+    width: 150px;
+    background-color: red;
+    border: 1px solid white;
+    border-radius: 20px;
+}
+.viewbtn{
+    width: 150px;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid lightblue;
+    border-radius: 15px;
+}
+.btns{
+    display: flex;
+    flex-direction: row;
+    size: 20px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+}

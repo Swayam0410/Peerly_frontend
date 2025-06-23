@@ -1,0 +1,27 @@
+.whole3{
+    height: 100%;
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: space-between;
+    color: black;
+    
+
+}
+input{
+    border: 2px solid blanchedalmond;
+}
+.cnt{
+    width: 500px;
+    border: 2px solid blanchedalmond;
+    height: 200px;
+}
+button1{
+    background-color:  green;
+}
+.ql-editor {
+  min-height: 150px;
+  max-height: 400px;
+  overflow-y: auto;
+}

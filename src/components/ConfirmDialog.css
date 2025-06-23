@@ -1,0 +1,11 @@
+/* ConfirmDialog.css */
+.DialogOverlay {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.DialogContent {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  max-width: 400px;
+  margin: auto;
+}

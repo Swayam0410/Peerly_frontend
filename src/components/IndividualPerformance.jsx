@@ -8,20 +8,31 @@ const IndividualPerformance = () => {
   const [posts, setPosts] = useState([]);
   const [viewUpvotedOnly, setViewUpvotedOnly] = useState(false);
 
-  const fetchData = async () => {
-    try {
-      const res = await fetch(`${import.meta.env.VITE_API_URL}/performance/${email}`);
-      const contentType = res.headers.get("content-type");
-      if (!contentType || !contentType.includes("application/json")) {
-        throw new Error("Invalid JSON response from backend");
-      }
-
-      const data = await res.json();
-      setPosts(data);
-    } catch (err) {
-      console.error("Error fetching performance data:", err);
+const fetchData = async () => {
+  try {
+    const res = await fetch(`${import.meta.env.VITE_API_URL}/performance/${email}`);
+    
+    if (!res.ok) {
+      // If the user doesn't exist, treat it as empty data
+      setPosts([]);
+      return;
     }
-  };
+
+    const contentType = res.headers.get("content-type");
+    if (!contentType || !contentType.includes("application/json")) {
+      throw new Error("Invalid JSON response from backend");
+    }
+
+    const data = await res.json();
+
+    // If backend returns null or undefined, fallback to empty array
+    setPosts(Array.isArray(data) ? data : []);
+  } catch (err) {
+    console.error("Error fetching performance data:", err);
+    setPosts([]); // Prevent app crash and allow rendering with zeros
+  }
+};
+
 
   useEffect(() => {
     fetchData();
